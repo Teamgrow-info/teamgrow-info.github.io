@@ -1,0 +1,21 @@
+# GitHub Pages configuration
+title: TeamGrow
+description: Hello World page for TeamGrow
+url: "https://teamgrow-fr.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .git/
+
+# Include files
+include:
+  - _pages
