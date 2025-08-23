@@ -1,8 +1,8 @@
 # GitHub Pages configuration
 title: TeamGrow
 description: Hello World page for TeamGrow
-url: "https://teamgrow-fr.github.io"
-baseurl: ""
+url: "https://kartoch.github.io"
+baseurl: "/teamgrow-fr.github.io"
 
 # Build settings
 markdown: kramdown
