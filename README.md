@@ -4,7 +4,7 @@ A simple "Hello World" website hosted on GitHub Pages.
 
 ## 🚀 Live Site
 
-Visit the live site at: `https://kartoch.github.io/teamgrow-fr.github.io`
+Visit the live site at: `https://teamgrow-info.github.io/teamgrow-fr.github.io`
 
 ## 📁 Project Structure
 
@@ -51,7 +51,7 @@ This site is automatically deployed to GitHub Pages when changes are pushed to t
 5. Choose the `main` branch and `/ (root)` folder
 6. Click "Save"
 
-The site will be available at `https://kartoch.github.io/teamgrow-fr.github.io` within a few minutes.
+The site will be available at `https://teamgrow-info.github.io/teamgrow-fr.github.io` within a few minutes.
 
 ## ✨ Features
 
