@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set domain cookies before GTM loads -->
+    <script>
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        function generateRandomHex(length) {
+            const chars = '0123456789abcdef';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+        
+        function setSecureCookie(name, value, days, domain) {
+            if (getCookie(name) !== null) {
+                return;
+            }
+            
+            const cookieValue = value || generateRandomHex(16);
+            
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            // Add Secure flag if served over HTTPS
+            const secure = location.protocol === 'https:' ? '; Secure' : '';
+            document.cookie = name + "=" + cookieValue + expires + "; path=/; domain=" + domain + "; SameSite=Lax" + secure;
+        }        
+        setSecureCookie("tracking_consent", null, 365, ".teamgrow.info");
+    </script>
+    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
