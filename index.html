@@ -39,7 +39,7 @@
             const secure = location.protocol === 'https:' ? '; Secure' : '';
             document.cookie = name + "=" + cookieValue + expires + "; path=/; domain=" + domain + "; SameSite=Lax" + secure;
         }        
-        setSecureCookie("tracking_consent", null, 365, ".teamgrow.info");
+        setSecureCookie("_ts_master_id", null, 365, ".teamgrow.info");
     </script>
     
     <!-- Google Tag Manager -->
